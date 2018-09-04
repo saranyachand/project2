@@ -1,0 +1,29 @@
+<html>
+    <head>
+    </head>
+    <title>slideshow</title>
+    <body>
+        <h1>Automatic-slideshow</h1>
+        <div class="slider">
+                <div> <img class="slides" src="img/download.jpg"> </div>
+                <div> <img class="slides"src="img/images.jpg"></div>
+                 </div>
+                 <script>
+                        var myIndex = 0;
+                        slide();
+                        function slide()
+                         {
+                        var i;
+                        var x = document.getElementsByClassName("Slides");
+                        for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                          }
+                        myIndex++;
+                        if (myIndex > x.length) {myIndex = 1}    
+                        x[myIndex-1].style.display = "block"; 
+                         setTimeout(slide, 2000); 
+                              }
+                 </script>
+                        
+ </body>
+</html>
